@@ -3,7 +3,7 @@
 <head>
     <title>MaskWeb</title>
     <link rel="stylesheet" href="css/style.css">
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
@@ -24,41 +24,79 @@
   <!-- The flexible grid (content) -->
   <div class="row">
     <div class="side">
-      <h2>About Me</h2>
-      <h5>Photo of me:</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-      <h3>More Text</h3>
-      <p>Lorem ipsum dolor sit ame.</p>
-      <div class="fakeimg" style="height:60px;">Image</div><br>
-      <div class="fakeimg" style="height:60px;">Image</div><br>
-      <div class="fakeimg" style="height:60px;">Image</div>
+      <h2>Filtro de Productos</h2>
+      <h5>Tipos:</h5>
+      <form action="/action_page.php">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">animal print</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2">stampado</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3">clasico</label><br><br>
+        <input type="submit" value="Buscar">
+      </form> 
+      
     </div>
     <div class="main">
         <div class="flex-container">
-            <div>1
-                
-                <img src="img/barbijo/animal.png">
-            </div>
-            <div>2
-                <img src="img/barbijo/animal1.png"> 
+                    <div class="card">
+                        
+                        <img src="img/barbijo/animal.png">
+                        <div class="container">
+                            <h4>
+                                $200
 
-            </div>
-            <div>3
-                <img src="img/barbijo/leon.png">
+                            </h4>
+                            <p class="descripcionCard">
+                                Barbijo animal print algodon medidas 10x20x30
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/barbijo/animal1.png"> 
+                        <div class="container">
+                            <h4>
+                                
+                                $200
+                            </h4>
+                            <p class="descripcionCard">
+                                Barbijo animal print violeta algodon medidas 10x20x30
+                            </p>
+                        </div>
 
-            </div>  
-            <div>4
-                <img src="img/barbijo/perro.png">  
+                    </div>
+                    <div class="card">
+                        <img src="img/barbijo/leon.png">
+                        <div class="container">
+                            <h4>
 
-            </div>
+                                $200
+                            </h4>
+                            <p class="descripcionCard">
+                                Barbijo Leon algodon medidas 10x20x30
+                            </p>
+                        </div>
+
+                    </div>  
+                    <div class="card">
+                        <img src="img/barbijo/perro.png">  
+                        <div class="container">
+                            <h4>
+
+                                $200
+                            </h4>
+                            <p class="descripcionCard">
+                                Barbijo Perro algodon medidas 10x20x30
+                            </p>
+                        </div>
+                    </div>
             
           </div>
   </div>
-  
+</div>
   <!-- Footer -->
   <div class="footer">
-    <h2>Footer</h2>
+    <h2>Universidad Nacional Arturo Jauretche</h2>
   </div>
   
           
