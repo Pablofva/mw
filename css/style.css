@@ -19,7 +19,7 @@
   h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: -webkit-linear-gradient(to right,black 50%,#60e000 50%);
-    -webkit-background-clip: text;
+    
      text-shadow: 2px 2px 2px black;
   }
    /* Style the top navigation bar */
@@ -38,7 +38,7 @@
   
   /* Change color on hover */
   .navbar a:hover {
-    background-color: #ddd;
+    background-color: #6fdb1cb6;
     color: black;
   }
   
