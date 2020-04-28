@@ -2,21 +2,31 @@
     box-sizing: border-box;
   }
   
-  /* Style the body */
+   
   body {
-    font-family: Arial;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
   }
   
   /* Header/logo Title */
   .header {
-    padding: 60px;
+    padding: 25px;
     text-align: center;
-    background: #1abc9c;
+    background:linear-gradient(to right,#60e000 50%, black 50%);
     color: white;
   }
-  
-  /* Style the top navigation bar */
+  h3{
+    text-align: center;
+    font-size: 30px;
+    color:#60e000;
+  }
+  h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: -webkit-linear-gradient(to right,black 50%,#60e000 50%);
+    
+     text-shadow: 2px 2px 2px black;
+  }
+   /* Style the top navigation bar */
   .navbar {
     display: flex;
     background-color: #333;
@@ -32,7 +42,7 @@
   
   /* Change color on hover */
   .navbar a:hover {
-    background-color: #ddd;
+    background-color: #3cff00;
     color: black;
   }
   
@@ -88,11 +98,9 @@
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
-.flex-container .card img{
-    width: 330px;
-    height: 220px;
-}
+
 .flex-container .card h4{
+    color:#60e000;
     font-weight: 900;
 }
 /* .flex-container .card p{
@@ -101,7 +109,7 @@
 .flex-container .card a{
     font-weight: 500;
     text-decoration: none;
-    color: #3498bd;
+    color: #244e02;
 }
          
   /* Footer */
