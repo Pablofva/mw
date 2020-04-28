@@ -2,9 +2,9 @@
     box-sizing: border-box;
   }
   
-  /* Style the body *
+   
   body {
-    font-family: Arial;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
   }
   
@@ -15,7 +15,11 @@
     background:linear-gradient(to right,#60e000 50%, black 50%);
     color: white;
   }
-
+  h3{
+    text-align: center;
+    font-size: 30px;
+    color:#60e000;
+  }
   h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: -webkit-linear-gradient(to right,black 50%,#60e000 50%);
@@ -38,7 +42,7 @@
   
   /* Change color on hover */
   .navbar a:hover {
-    background-color: #6fdb1cb6;
+    background-color: #3cff00;
     color: black;
   }
   
@@ -96,6 +100,7 @@
 }
 
 .flex-container .card h4{
+    color:#60e000;
     font-weight: 900;
 }
 /* .flex-container .card p{
