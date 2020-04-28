@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   
-  /* Style the body */
+  /* Style the body *
   body {
     font-family: Arial;
     margin: 0;
@@ -10,13 +10,19 @@
   
   /* Header/logo Title */
   .header {
-    padding: 60px;
+    padding: 25px;
     text-align: center;
     background:linear-gradient(to right,#60e000 50%, black 50%);
     color: white;
   }
-  
-  /* Style the top navigation bar */
+
+  h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: -webkit-linear-gradient(to right,black 50%,#60e000 50%);
+    -webkit-background-clip: text;
+     text-shadow: 2px 2px 2px black;
+  }
+   /* Style the top navigation bar */
   .navbar {
     display: flex;
     background-color: #333;
