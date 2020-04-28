@@ -1,0 +1,42 @@
+span {
+    color: red;
+}
+
+.bordeSimple {
+    border-width: medium;
+    border-color: black;
+    border-style: solid;
+}
+
+.bordeIzq {
+    border-left-width: medium;
+    border-color: black;
+    border-left-style: solid;
+}
+
+section {
+    padding: 1%;
+}
+
+.cuerpo {
+    height: 450px;
+}
+
+.menu {
+    width:auto; 
+    float:left; 
+    height: inherit;
+    padding-left: 8px;
+}
+
+.secciones {
+    width:85%; 
+    float:right; 
+    height: inherit;
+     overflow:scroll; 
+     overflow-x:hidden;
+}
+
+table {
+  text-align:center;
+}
