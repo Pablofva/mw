@@ -1,5 +1,91 @@
 <!DOCTYPE html>
 <html>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <!-- <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script> -->
+    <script>
+        //Expresión para validar un correo electrónico
+        var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+        //Expresión para validar edad de 18 a 60 años
+        var expr2 = /^1[8-9]|[2-5]\d|60$/;
+        $(document).ready(function(){
+            console.log('holaprp');
+            //función click
+            $("#bEnviar").click(function(){
+                //Guardar en variables el valor que tengan las cajas de texto
+                //Por medio de los id's
+                //Y tener mejor manipulación de dichos valores
+                var nombre = $("#Nombre").val();
+                var apellido = $("#Apellido").val();
+                var fecha = $("#fechaDeNacimiento").val();
+                var rb=$("input[type='radio']:checked");
+                var sel=$("#Valoracion option:selected");
+                var correo = $("#Email").val();
+                var comentario=$("#Comentario").val();
+
+ 
+                // --- Condicionales anidados ----
+                //Si nombre está vacío
+                //Muestra el mensaje
+                //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
+              
+                if(nombre == ""){
+                    $("#mensaje1").fadeIn("slow");
+                    return false;
+                }
+                //en otro caso, el mensaje no se muestra
+                else{
+                    $("#mensaje1").fadeOut();
+
+                    
+                    if(apellido == ""){
+                        $("#mensaje2").fadeIn("slow");
+                        return false;
+                    }
+                    //en otro caso, el mensaje no se muestra
+                    else{
+                        console.log('hola');
+                        $("#mensaje2").fadeOut();
+                        if(fecha == ""){
+                            $("#mensaje3").fadeIn("slow");
+                            return false;
+                        }
+                        //en otro caso, el mensaje no se muestra
+                        else{
+                            console.log('hola');
+                            $("#mensaje3").fadeOut();
+                            if(rb.length==0){
+                                $("#mensaje4").fadeIn("slow");
+                                return false;
+                            }
+                            else{
+                                 $("#mensaje4").fadeOut();
+                                if(sel.val()==""){
+                                    $("#mensaje5").fadeIn("slow");
+                                    return false;
+                                }
+                                else{
+                                    $("#mensaje5").fadeOut();
+                                    if(correo==""|| !expr.test(correo)){
+                                        $("#mensaje6").fadeIn("slow");
+                                        return false;
+                                    }
+                                   
+                                }
+                                }
+                            }
+                            }
+                        }
+               
+                    
+                    
+                
+ 
+            });
+        });
+    </script>
+    <style type="text/css">
+       .error {color: #f00;}
+    </style>
 <head>
     <title>MaskWeb</title>
     <link rel="stylesheet" href="css/style.css">
@@ -46,16 +132,18 @@
                 <label for="fname">Nombre</label>
               </div>
               <div class="col-75">
-                <input type="text" id="fname" name="firstname" placeholder="nombre..">
+                <input type="text" id="Nombre" name="firstname" placeholder="nombre..">
               </div>
+              <div id="mensaje1" class="errores">Ingrese Nombre</div>
             </div>
             <div class="row">
               <div class="col-25">
                 <label for="lname">Apellido</label>
               </div>
               <div class="col-75">
-                <input type="text" id="lname" name="lastname" placeholder="su apellido..">
+                <input type="text" id="Apellido" name="lastname" placeholder="su apellido..">
               </div>
+              <div id="mensaje2" class="errores">Ingrese Apellido</div>
             </div>
             <div class="row">
                 <div class="col-25">
@@ -64,6 +152,7 @@
                 <div class="col-75">
                     <input type="date" id="fechaDeNacimiento" name="fechaDeNacimiento">
                 </div>
+                <div id="mensaje3" class="errores">Ingrese Fecha de Nacimiento</div>
               </div>
             <div class="row">
               <div class="col-25">
@@ -73,40 +162,44 @@
                 <label for="female">Femenino</label><br>
            
               </div>
-             
+              <div id="mensaje4" class="errores">Ingrese Sexo</div>
             </div>
             <div class="row">
                 <div class="col-25">
                   <label for="country">Valoración de la página</label>
                 </div>
                 <div class="col-75">
-                  <select id="country" name="country">
+                  <select id="Valoracion" name="country">
+                    <option value="" selected >seleccione opcion</option>
                     <option value="Lamentable">Lamentable</option>
                     <option value="Mala">Mala</option>
-                    <option value="usa">Podría ser mejor</option>
-                    <option value="usa">Cumple con mis expectativas</option>
-                    <option value="usa">Me encantó</option>
+                    <option value="Pmejor">Podría ser mejor</option>
+                    <option value="Cumple">Cumple con mis expectativas</option>
+                    <option value="encanto">Me encantó</option>
                   </select>
                 </div>
+                <div id="mensaje5" class="errores">Ingrese Valoracion</div>
               </div>
             <div class="row">
                 <div class="col-25">
                   <label for="fname">Email</label>
                 </div>
                 <div class="col-75">
-                  <input type="text" id="fname" name="email" placeholder="direccion..">
+                  <input type="text" id="Email" name="email" placeholder="direccion..">
                 </div>
+                <div id="mensaje6" class="errores">Ingrese Email</div>
               </div>
             <div class="row">
               <div class="col-25">
                 <label for="subject">Comentario</label>
               </div>
               <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Escriba su comentario.." style="height:200px"></textarea>
+                <textarea id="Comentario" name="subject" placeholder="Escriba su comentario.." style="height:200px"></textarea>
               </div>
+              <!-- <div id="mensaje6" class="errores"></div> -->
             </div>
             <div class="row">
-              <input type="submit" value="Submit">
+              <input type="submit" id="bEnviar" value="Submit">
             </div>
             </form>
           </div>
