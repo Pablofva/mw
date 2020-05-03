@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MaskWeb</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+ 
+  <!-- Header -->
+  <div class="header">
+    <a href="index.html"><img src="img/logo.png"></a>
+    <h1>Mask Web</h1>
+  </div>
+  
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="barbijos.html">Barbijos</a>
+    <a href="cascos.html">Cascos</a>
+    <a href="mascaras.html">Mascaras</a>
+
+  </div>
+  
+  <!-- The flexible grid (content) -->
+  <div class="row">
+    <div class="side">
+      <h2>Filtro de Productos</h2>
+      <h5>Tipos:</h5>
+      <form action="/action_page.php">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">Por definir</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2">Por definir</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3">Por definir</label><br><br>
+        <input type="submit" value="Buscar">
+      </form> 
+      
+    </div>
+    <div class="main">
+        <div class="container">
+            <form action="/action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Nombre</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="nombre..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Apellido</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="su apellido..">
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="lname">Fecha de nacimiento</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="fechaDeNacimiento" name="fechaDeNacimiento">
+                </div>
+              </div>
+            <div class="row">
+              <div class="col-25">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Masculino</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Femenino</label><br>
+           
+              </div>
+             
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="country">Valoración de la página</label>
+                </div>
+                <div class="col-75">
+                  <select id="country" name="country">
+                    <option value="Lamentable">Lamentable</option>
+                    <option value="Mala">Mala</option>
+                    <option value="usa">Podría ser mejor</option>
+                    <option value="usa">Cumple con mis expectativas</option>
+                    <option value="usa">Me encantó</option>
+                  </select>
+                </div>
+              </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="fname">Email</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="email" placeholder="direccion..">
+                </div>
+              </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Comentario</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Escriba su comentario.." style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Submit">
+            </div>
+            </form>
+          </div>
+    </div>
+  <!-- Footer -->
+  <div class="footer">
+    <h2>Universidad Nacional Arturo Jauretche</h2>
+  </div>
+  
+          
+          
+
+
+    
+</body>
+</html>
