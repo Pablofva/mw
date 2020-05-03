@@ -1,88 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
     <!-- <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script> -->
-    <script>
-        //Expresión para validar un correo electrónico
-        var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
-        //Expresión para validar edad de 18 a 60 años
-        var expr2 = /^1[8-9]|[2-5]\d|60$/;
-        $(document).ready(function(){
-            console.log('holaprp');
-            //función click
-            $("#bEnviar").click(function(){
-                //Guardar en variables el valor que tengan las cajas de texto
-                //Por medio de los id's
-                //Y tener mejor manipulación de dichos valores
-                var nombre = $("#Nombre").val();
-                var apellido = $("#Apellido").val();
-                var fecha = $("#fechaDeNacimiento").val();
-                var rb=$("input[type='radio']:checked");
-                var sel=$("#Valoracion option:selected");
-                var correo = $("#Email").val();
-                var comentario=$("#Comentario").val();
-
- 
-                // --- Condicionales anidados ----
-                //Si nombre está vacío
-                //Muestra el mensaje
-                //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
-              
-                if(nombre == ""){
-                    $("#mensaje1").fadeIn("slow");
-                    return false;
-                }
-                //en otro caso, el mensaje no se muestra
-                else{
-                    $("#mensaje1").fadeOut();
-
-                    
-                    if(apellido == ""){
-                        $("#mensaje2").fadeIn("slow");
-                        return false;
-                    }
-                    //en otro caso, el mensaje no se muestra
-                    else{
-                        console.log('hola');
-                        $("#mensaje2").fadeOut();
-                        if(fecha == ""){
-                            $("#mensaje3").fadeIn("slow");
-                            return false;
-                        }
-                        //en otro caso, el mensaje no se muestra
-                        else{
-                            console.log('hola');
-                            $("#mensaje3").fadeOut();
-                            if(rb.length==0){
-                                $("#mensaje4").fadeIn("slow");
-                                return false;
-                            }
-                            else{
-                                 $("#mensaje4").fadeOut();
-                                if(sel.val()==""){
-                                    $("#mensaje5").fadeIn("slow");
-                                    return false;
-                                }
-                                else{
-                                    $("#mensaje5").fadeOut();
-                                    if(correo==""|| !expr.test(correo)){
-                                        $("#mensaje6").fadeIn("slow");
-                                        return false;
-                                    }
-                                   
-                                }
-                                }
-                            }
-                            }
-                        }
-               
-                    
-                    
-                
- 
-            });
-        });
-    </script>
+  <script src="js/validaciones.js"></script>
     <style type="text/css">
        .error {color: #f00;}
     </style>
@@ -126,7 +46,7 @@
     </div>
     <div class="main">
         <div class="container">
-            <form action="/action_page.php">
+            <form action="/action_page.php" id="Formulario">
             <div class="row">
               <div class="col-25">
                 <label for="fname">Nombre</label>
@@ -156,10 +76,10 @@
               </div>
             <div class="row">
               <div class="col-25">
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Masculino</label><br>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Femenino</label><br>
+                <input type="radio" id="male" name="gender" value="Hombre">
+                <label for="Hombre">Masculino</label><br>
+                <input type="radio" id="female" name="gender" value="Mujer">
+                <label for="Mujer">Femenino</label><br>
            
               </div>
               <div id="mensaje4" class="errores">Ingrese Sexo</div>
@@ -199,11 +119,35 @@
               <!-- <div id="mensaje6" class="errores"></div> -->
             </div>
             <div class="row">
-              <input type="submit" id="bEnviar" value="Submit">
+                <input type="button" id="limpiar" value="Limpiar">
+                <input type="submit" id="bEnviar" value="Submit">
+                <input type="button" id="cancelar" value="Cancelar">
+
             </div>
             </form>
           </div>
     </div>
+<!-- MODAL ---------------------------------------------- -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Modal Header</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+  
+  </div>
+
+  
   <!-- Footer -->
   <div class="footer">
     <h2>Universidad Nacional Arturo Jauretche</h2>
