@@ -26,13 +26,13 @@
     
      text-shadow: 2px 2px 2px black;
   }
-   /* Style the top navigation bar */
+   /* Estilo de la barra de navegacion */
   .navbar {
     display: flex;
     background-color: #333;
   }
   
-  /* Style the navigation bar links */
+  /* Estilo de los link de la barra de navegacion */
   .navbar a {
     color: white;
     padding: 14px 20px;
@@ -40,40 +40,40 @@
     text-align: center;
   }
   
-  /* Change color on hover */
+  /* Cambia color del hover */
   .navbar a:hover {
     background-color: #3cff00;
     color: black;
   }
   
-  /* Column container */
+  /* Contenedor de la columna izquierda*/
   .row {  
     display: flex;
     flex-wrap: wrap;
   }
   
-  /* Create two unequal columns that sits next to each other */
-  /* Sidebar/left column */
+  /* Crea dos columnas diferentes que se posicionan una al lado de la otra */
+  /* Sidebar/columna izquierda */
   .side {
     flex: 30%;
     background-color: #f1f1f1;
     padding: 20px;
   }
   
-  /* Main column */
+  /* Columna principal */
   .main {
     flex: 70%;
     background-color: white;
     /* padding: 20px; */
   }
   
-  /* Fake image, just for this example */
+  /* Imagen falsa*/
   .fakeimg {
     background-color: #aaa;
     width: 100%;
     padding: 20px;
   }
-  /* CARD */
+  /* Tarjeta de precios */
   .flex-container {
       width: 100%;
       max-width: 1200px;
@@ -119,7 +119,9 @@
     text-align: center;
     background: #ddd;
   }
-  /* FORMULARIO */
+
+    /*********************/
+   /*    FORMULARIO     */
   /*********************/
   * {
     box-sizing: border-box;
@@ -184,7 +186,8 @@
     clear: both;
   }
   
-  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  /* Layout responsivo - cuando la pantalla tiene menos de 700px de ancho,
+  hace que las dos columnas esten una encima de otra, en vez de estar una al lado de la otra */
   @media screen and (max-width: 700px) {
     .row, .navbar {   
       flex-direction: column;
