@@ -94,6 +94,7 @@
     text-align: center;
     transition: all 0.25s;
      }
+
 .flex-container .card:hover{
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
@@ -111,7 +112,37 @@
     text-decoration: none;
     color: #244e02;
 }
-         
+/* STYLO PARA TOGLE DE JQUERY ------------------------------------*/
+.flex-container .conti {
+  width: 330px;
+  height: 430px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: black;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+   }
+
+.flex-container .conti:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.flex-container .conti h4{
+  color:#60e000;
+  font-weight: 900;
+}
+/* .flex-container .card p{
+  padding: 0 1rem;
+} */
+.flex-container .conti a{
+  font-weight: 500;
+  text-decoration: none;
+  color: #244e02;
+}
+   
   /* Footer */
   .footer {
     padding: 20px;
@@ -155,6 +186,7 @@
     border-radius: 4px;
     cursor: pointer;
     float: right;
+    margin-left: 1%;
   }
   
   input[type=submit]:hover {
@@ -185,9 +217,98 @@
     display: table;
     clear: both;
   }
+<<<<<<< HEAD
   
   /* Layout responsivo - cuando la pantalla tiene menos de 700px de ancho,
   hace que las dos columnas esten una encima de otra, en vez de estar una al lado de la otra */
+=======
+  .errores{
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.3);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.3);
+    -o-box-shadow:0 0 10px rgba(0,0,0,0.3);
+    background: red;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    color: #fff;
+    display: none;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 740px;
+    padding: 10px;
+    /* position:absolute; */
+
+  }
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* -------------------------------------Modal Content ----------------------------------*/
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+>>>>>>> master
   @media screen and (max-width: 700px) {
     .row, .navbar {   
       flex-direction: column;
