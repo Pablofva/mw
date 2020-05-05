@@ -38,6 +38,28 @@ function meme(){
         
     }
 };
+function mostrarTotal(){
+    var modal = document.getElementById("myModal");
+   
+    $(".modal-body").html(`
+    <li>TOTAL: ${total}</li>
+    
+    </ul>  `);
+     $("#myModal").css("display", "block");
+    
+    
+    $(".close").on("click",function(){
+        $("#myModal").css("display", "none");
+    });
+    
+    $(window).on("click",function(event){
+        if(event.target == modal){
+            $("#myModal").css("display","none");
+        }
+    
+    });
+    
+};
 $(document).ready(function(){
     $(".card").on("click",function(){
         var elId = $(this).attr('id');
@@ -73,4 +95,7 @@ $(document).ready(function(){
     //   noMuestro();
     // }
 });
+$("#carrito").on("click",function(){
+    mostrarTotal();
+})
 });
