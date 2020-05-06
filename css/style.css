@@ -1,4 +1,4 @@
-q* {
+* {
     box-sizing: border-box;
   }
   
@@ -15,6 +15,9 @@ q* {
     background:linear-gradient(to right,#60e000 50%, black 50%);
     color: white;
   }
+  .imCarrito{
+    filter: brightness(19);
+  }
   h3{
     text-align: center;
     font-size: 30px;
@@ -26,13 +29,13 @@ q* {
     
      text-shadow: 2px 2px 2px black;
   }
-   /* Estilo de la barra de navegacion */
+   /* Style the top navigation bar */
   .navbar {
     display: flex;
     background-color: #333;
   }
   
-  /* Estilo de los link de la barra de navegacion */
+  /* Style the navigation bar links */
   .navbar a {
     color: white;
     padding: 14px 20px;
@@ -40,40 +43,40 @@ q* {
     text-align: center;
   }
   
-  /* Cambia color del hover */
+  /* Change color on hover */
   .navbar a:hover {
     background-color: #3cff00;
     color: black;
   }
   
-  /* Contenedor de la columna izquierda*/
+  /* Column container */
   .row {  
     display: flex;
     flex-wrap: wrap;
   }
   
-  /* Crea dos columnas diferentes que se posicionan una al lado de la otra */
-  /* Sidebar/columna izquierda */
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
   .side {
     flex: 30%;
     background-color: #f1f1f1;
     padding: 20px;
   }
   
-  /* Columna principal */
+  /* Main column */
   .main {
     flex: 70%;
     background-color: white;
     /* padding: 20px; */
   }
   
-  /* Imagen falsa*/
+  /* Fake image, just for this example */
   .fakeimg {
     background-color: #aaa;
     width: 100%;
     padding: 20px;
   }
-  /* Tarjeta de precios */
+  /* CARD */
   .flex-container {
       width: 100%;
       max-width: 1200px;
@@ -150,10 +153,7 @@ q* {
     text-align: center;
     background: #ddd;
   }
-
-    /*********************/
-   /*    FORMULARIO     */
-  /*********************/
+  /* FORMULARIO */
   * {
     box-sizing: border-box;
   }
@@ -217,9 +217,6 @@ q* {
     display: table;
     clear: both;
   }
-  
-  /* Layout responsivo - cuando la pantalla tiene menos de 700px de ancho,
-  hace que las dos columnas esten una encima de otra, en vez de estar una al lado de la otra */
   .errores{
     -webkit-box-shadow:0 0 10px rgba(0,0,0,0.3);
     -moz-box-shadow:0 0 10px rgba(0,0,0,0.3);
