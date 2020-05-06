@@ -2,8 +2,8 @@
 //Expresión para validar un correo electrónico
 //función click
 var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
-//Expresión para validar edad de 18 a 60 años
-var expr2 = /^1[8-9]|[2-5]\d|60$/;
+
+var expr2 = /^[a-zA-Z]+$/;;
 function valeval(){
     var nombre = $("#Nombre").val();
     var apellido = $("#Apellido").val();
@@ -68,7 +68,7 @@ $(document).ready(function(){
         //Muestra el mensaje
         //Con false sale de los if's y espera a que sea pulsado de nuevo el botón de enviar
       
-        if(nombre == ""){
+        if(nombre == ""|| !expr2.test(nombre)){
             $("#mensaje1").fadeIn("slow");
             return false;
         }
@@ -77,7 +77,7 @@ $(document).ready(function(){
             $("#mensaje1").fadeOut();
 
             
-            if(apellido == ""){
+            if(apellido == ""|| !expr2.test(apellido)){
                 $("#mensaje2").fadeIn("slow");
                 return false;
             }
@@ -138,8 +138,8 @@ $("#cancelar").on("click",function(){
 var modal = document.getElementById("myModal");
 
 $(".modal-body").html(`
-<button id="lud">Open Modal</button>
-<button id="alann">Open Modal</button> `);
+<button id="lud">DESEO VOLVER A PAGINA ANTERIOR</button>
+<button id="alann">NO CANCELAR</button> `);
  $("#myModal").css("display", "block");
 
 

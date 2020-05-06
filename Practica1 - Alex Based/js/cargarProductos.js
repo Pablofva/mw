@@ -60,12 +60,12 @@ function mostrarTotal(){
     
 };
 
-// INICIO-----------------------------------------------------------------
+// INICIO
 
 // CARGAR PRODUCTOS DINAMICAMENTE-------------------------------------------------------
 $(document).ready(function(){
     
-        url='http://www.json-generator.com/api/json/get/cqEonTlNTS?indent=2';
+        url='http://www.json-generator.com/api/json/get/bTOsDsiHqW?indent=2';
         $.get(url,function(datos){
             console.log(datos);
           
@@ -73,7 +73,7 @@ $(document).ready(function(){
                 $(".flex-container").append(`
                 <div class="card" id="${obj.id}">
                         
-                        <img src="img/barbijo/${obj.imagen}">
+                        <img src="${obj.imagen}">
                         <div class="container">
                             <h4 id="jeje">
                                 ${obj.precio}
