@@ -65,9 +65,8 @@ function mostrarTotal(){
 // CARGAR PRODUCTOS DINAMICAMENTE-------------------------------------------------------
 $(document).ready(function(){
     
-    url ='http://www.json-generator.com/api/json/get/cfJjUsJzEy?indent=2';
-        $.get(url,function(datos)
-        {
+    url ='http://www.json-generator.com/api/json/get/bPlFmiPvoy?indent=2';
+        $.get(url,function(datos){
             console.log(datos);
           
             $.each(datos,function(index,obj){
@@ -102,6 +101,9 @@ $(document).ready(function(){
                 mostrarTotal();});
                 // --------------------------------------------------
         });
+
+
+
 
 
      });

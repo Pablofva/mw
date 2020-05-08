@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>MaskWeb</title>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaskWeb</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script src="js/cargarProductosC.js"></script>
 
 </head>
+
 <body>
- 
+
   <!-- Header -->
   <div class="header">
     <a href="index.html"><img src="img/logo.png"></a>
     <h1>Mask Web</h1>
   </div>
-  
+
   <!-- Navigation Bar -->
   <div class="navbar">
     <a href="barbijos.html">Barbijos</a>
@@ -22,7 +26,7 @@
     <a href="encuesta.html">Encuesta</a>
     <img src="img/carrito.png" width="50" height="50" class="imCarrito" id="carrito">
   </div>
-  
+
   <!-- The flexible grid (content) -->
   <div class="row">
     <div class="side">
@@ -36,47 +40,47 @@
         <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
         <label for="vehicle3">Por definir</label><br><br>
         <input type="submit" value="Buscar">
-      </form> 
-      
+      </form>
+
     </div>
     <div class="main">
-        <div class="flex-container">
-                    <div class="card">
-                        <img src="img/casco/casco1.png">
-                        <div class="container">
-                            <h4>
-                                $2000
+      <div class="flex-container">
 
-                            </h4>
-                            <p class="descripcionCard">
-                                Casco de contención
-                            </p>
-                        </div>
-                    </div>
 
-                    <div class="card">
-                        <img src="img/casco/cascote.png"> 
-                        <div class="container">
-                            <h4>
-                                
-                                $1000
-                            </h4>
-                            <p class="descripcionCard">
-                                Cascote
-                            </p>
-                        </div>
-                    </div>
-        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- MODAL TOTAL DE PRODUCTOS----------------------------------------- -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Modal Header</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+
+  </div>
   <!-- Footer -->
   <div class="footer">
     <h2>Universidad Nacional Arturo Jauretche</h2>
   </div>
-  
-          
-          
 
 
-    
+
+
+
+
 </body>
+
 </html>
+

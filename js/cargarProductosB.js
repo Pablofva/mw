@@ -66,8 +66,7 @@ function mostrarTotal(){
 $(document).ready(function(){
     
     url ='http://www.json-generator.com/api/json/get/cfJjUsJzEy?indent=2';
-        $.get(url,function(datos)
-        {
+        $.get(url,function(datos){
             console.log(datos);
           
             $.each(datos,function(index,obj){
@@ -102,6 +101,9 @@ $(document).ready(function(){
                 mostrarTotal();});
                 // --------------------------------------------------
         });
+
+
+
 
 
      });
